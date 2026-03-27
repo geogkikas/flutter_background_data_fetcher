@@ -1,0 +1,35 @@
+name: flutter_background_engine
+description: "A generic Flutter background scheduling and SQLite storage engine."
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: ^3.10.8
+  flutter: '>=3.3.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # --- Core Engine Dependencies ---
+  flutter_background_service: ^5.1.0
+  android_alarm_manager_plus: ^5.0.0
+
+  # --- Storage & Permissions ---
+  shared_preferences: ^2.3.2
+  sqflite: ^2.4.2
+  path: ^1.9.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.example.flutter_background_engine
+        pluginClass: FlutterBackgroundEnginePlugin
+      ios:
+        pluginClass: FlutterBackgroundEnginePlugin
